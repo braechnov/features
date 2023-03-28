@@ -10,6 +10,7 @@
       "proposals": [
         "latest",
         "none",
+        "22.3.r17",
         "17",
         "11",
         "8"
@@ -20,12 +21,13 @@
     "jdkDistro": {
       "type": "string",
       "proposals": [
+        "grl",
         "ms",
         "open",
         "oracle",
         "tem"
       ],
-      "default": "ms",
+      "default": "grl",
       "description": "Select or enter a JDK distribution"
     },
     "installGradle": {
@@ -37,8 +39,9 @@
       "type": "string",
       "proposals": [
         "latest",
-        "7.5.1",
-        "6.9.3",
+        "8.0.2",
+        "7.6.1",
+        "6.9.4",
         "5.6.4"
       ],
       "default": "latest",
@@ -53,7 +56,8 @@
       "type": "string",
       "proposals": [
         "latest",
-        "3.8.6",
+        "3.9.1",
+        "3.8.8",
         "3.6.3",
         "3.5.4"
       ],
@@ -69,7 +73,7 @@
       "type": "string",
       "proposals": [
         "latest",
-        "1.10.12",
+        "1.10.13",
         "1.9.15"
       ],
       "default": "latest",
