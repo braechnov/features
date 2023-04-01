@@ -96,6 +96,8 @@ get_jdk_distro() {
             JDK_DISTRO="grl"
         fi
     fi
+
+    echo "-----  set JDK_DISTRO to ${JDK_DISTRO}  -----"
 }
 
 # Use SDKMAN to install something using a partial version match
