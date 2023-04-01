@@ -92,8 +92,6 @@ get_jdk_distro() {
     if [ "${JDK_DISTRO}" = "ms" ]; then
         if echo "${VERSION}" | grep -E '^8([\s\.]|$)' > /dev/null 2>&1 || echo "${VERSION}" | grep -E '^18([\s\.]|$)' > /dev/null 2>&1; then
             JDK_DISTRO="tem"
-        else
-            JDK_DISTRO="grl"
         fi
     fi
 
@@ -108,6 +106,14 @@ sdk_install() {
     local suffix="${4:-"\\s*"}"
     local full_version_check=${5:-".*-[a-z]+"}
     local set_as_default=${6:-"true"}
+
+    echo "-----  install_type is ${install_type}  -----"
+    echo "-----  requested_version is ${requested_version}  -----"
+    echo "-----  prefix is ${prefix}  -----"
+    echo "-----  suffix is ${suffix}  -----"
+    echo "-----  full_version is ${full_version}  -----"
+    echo "-----  set_as_default is ${set_as_default}  -----"
+
     if [ "${requested_version}" = "none" ]; then return; fi
     # Blank will install latest stable version SDKMAN has
     if [ "${requested_version}" = "latest" ] || [ "${requested_version}" = "lts" ] || [ "${requested_version}" = "default" ]; then
@@ -164,6 +170,9 @@ if [ ! -d "${SDKMAN_DIR}" ]; then
 fi
 
 get_jdk_distro ${JAVA_VERSION}
+
+echo "-----  JAVA_VERSION is set to ${JAVA_VERSION}  -----"
+
 sdk_install java ${JAVA_VERSION} "\\s*" "(\\.[a-z0-9]+)*-${JDK_DISTRO}\\s*" ".*-[a-z]+$" "true"
 
 # Additional java versions to be installed but not be set as default.
