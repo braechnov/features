@@ -7,7 +7,7 @@ Installs Java, SDKMAN! (if not installed), and needed dependencies.
 
 ```json
 "features": {
-    "ghcr.io/devcontainers/features/java:1": {}
+    "ghcr.io/braechnov/features/java:1": {}
 }
 ```
 
@@ -16,7 +16,7 @@ Installs Java, SDKMAN! (if not installed), and needed dependencies.
 | Options Id | Description | Type | Default Value |
 |-----|-----|-----|-----|
 | version | Select or enter a Java version to install | string | latest |
-| jdkDistro | Select or enter a JDK distribution | string | ms |
+| jdkDistro | Select or enter a JDK distribution | string | grl |
 | installGradle | Install Gradle, a build automation tool for multi-language software development | boolean | false |
 | gradleVersion | Select or enter a Gradle version | string | latest |
 | installMaven | Install Maven, a management tool for Java | boolean | false |
@@ -38,4 +38,4 @@ This Feature should work on recent versions of Debian/Ubuntu-based distributions
 
 ---
 
-_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/devcontainers/features/blob/main/src/java/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
+_Note: This file was auto-generated from the [devcontainer-feature.json](https://github.com/braechnov/features/blob/main/src/java/devcontainer-feature.json).  Add additional notes to a `NOTES.md`._
