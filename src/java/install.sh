@@ -92,8 +92,7 @@ get_jdk_distro() {
     if [ "${JDK_DISTRO}" = "ms" ]; then
         if echo "${VERSION}" | grep -E '^8([\s\.]|$)' > /dev/null 2>&1 || echo "${VERSION}" | grep -E '^18([\s\.]|$)' > /dev/null 2>&1; then
             JDK_DISTRO="tem"
-        fi
-        if echo "${VERSION}" | grep -E '^22([\s\.]|$)' > /dev/null 2>&1 || echo "${VERSION}" | grep -E '^22([\s\.]|$)' > /dev/null 2>&1; then
+        else
             JDK_DISTRO="grl"
         fi
     fi
